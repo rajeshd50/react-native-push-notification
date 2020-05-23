@@ -697,7 +697,7 @@ public class RNPushNotificationHelper {
 
       // Instanciate a default channel without sound defined for backward compatibility.
       String channel_id_no_sound = NOTIFICATION_CHANNEL_ID + "-" + importance + "-" + DEFAULT_VIBRATION;
-      checkOrCreateChannel(manager, channel_id_no_sound, null, importance, new long[] {0, DEFAULT_VIBRATION});
+      checkOrCreateChannel(manager, channel_id_no_sound, soundUri, importance, new long[] {0, DEFAULT_VIBRATION});
     }
 
     private void checkOrCreateChannel(NotificationManager manager, String channel_id, Uri soundUri, int importance, long[] vibratePattern) {
